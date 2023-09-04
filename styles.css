@@ -22,17 +22,17 @@ input[type="checkbox"].checkbox-lock:hover{
 input[type="checkbox"].checkbox-check {
   appearance: none;
   display: inline-block;
-  height: 14px;
-  width: 14px;
+  height: 1em;
+  width: 1em;
   background-color: var(--checkbox-background);
   border: 1px solid var(--checkbox-border);
-  border-radius: 3px;
+  border-radius: 0.21em;
   position: relative;
-  transition: background-color 0.2s ease;
-  transform: translateY(3px);
+/*  transition: background-color 0.2s ease;*/
+  transform: translateY(0.28em);
   margin-top: 0;
-  margin-right: 2px;
-  margin-bottom: 2px;
+  margin-right: 0.28em;
+/*  margin-bottom: 0.14em;*/
 }
 
 input:checked[type="checkbox"].checkbox-check{
@@ -59,7 +59,7 @@ input[type="checkbox"].checkbox-check:before,
   position: absolute;
   width: 2px;
   border-radius: 1px;
-  transition: background-color 0.2s ease;
+/*  transition: background-color 0.2s ease;*/
   background-color: transparent;
 }
 
@@ -104,36 +104,35 @@ input:checked[type="checkbox"].checkbox-toggle:before{
   left: 10px;
 }
 
-input[type="checkbox"].checkbox-heart {
-  appearance: none;
-  height: 14px;
-  width: 10px;
-  position: relative;
-  border-bottom-right-radius: 5px;
-  border: 1px solid var(--checkbox-border);
-  transform: rotateZ(-45deg) translateY(1px);
-    margin-right: 6px;
-        margin-bottom: 0;
-        margin-top: 0;
-}
-
 input[type="checkbox"].checkbox-heart,
 input[type="checkbox"].checkbox-heart:before,
 input[type="checkbox"].checkbox-heart:after{
 background-color: var(--checkbox-background);
 border-radius: 0px;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+border-top-left-radius: 1em;
+border-top-right-radius: 1em;
 transition: background-color 0.2s ease;
 }
 
+input[type="checkbox"].checkbox-heart {
+  appearance: none;
+  height: 1em;
+  width: 0.75em;
+  position: relative;
+  border-bottom-right-radius: 0.4em;
+  border: 1px solid var(--checkbox-border);
+  transform: rotateZ(-45deg) translateY(1px);
+    margin-right: 6px;
+        margin-bottom: 0;
+        margin-top: 0;
 
+}
 
 input[type="checkbox"].checkbox-heart:before{
   content: '';
   position: absolute;
-  width: 8px;
-  height: 12px;
+  width: calc(0.75em - 2px);
+  height: 0.75em;
   top: 0;
   left: 0;
 }
@@ -141,10 +140,10 @@ input[type="checkbox"].checkbox-heart:before{
 input[type="checkbox"].checkbox-heart:after{
   content: '';
   position: absolute;
-  width: 8px;
-  height: 12px;
-  top: 1px;
-  left: 1px;
+  width: calc(0.68em - 1px);
+  height: calc(1em - 1.5px);
+  top: calc(0.07em + 0px);
+  left: calc(0.15em - 1px);
   border-bottom-left-radius: 5px;
   border: 1px solid var(--checkbox-border);
   z-index: -1;
